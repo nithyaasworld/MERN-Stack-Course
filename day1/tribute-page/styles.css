@@ -1,0 +1,72 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    margin: 10px;
+    background-color: gray;
+    font-family: "Wotfard",Futura,-apple-system,sans-serif;
+}
+img {
+    width: 50%;
+    padding: 15px;
+    border-radius: 50px;
+}
+.tag-line-phrase{
+    width: 300px;
+    background: rgba(64, 128, 187, 0.1);
+    border-radius: 50px;
+    padding: 15px;
+    text-align: center;
+}
+.content{
+    text-align: center;
+}
+header, section {
+    background-color: white;
+}
+.tag-line-container{
+    display: flex;
+    padding: 15px;
+    align-items: center;
+    justify-content: center;
+}
+h1{
+    padding: 15px;    
+}
+.steve-info{
+    padding: 0 0 15px 0;
+    color: rgb(70, 70, 70);
+    font-style: italic;
+}
+.moments{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+li {
+    margin: 9px;
+}
+b{
+    padding-right: 5px;
+}
+.source{
+    color: grey;
+    margin: 10px;
+}
+.more-info{
+    margin: 10px;
+    font-size: 20px;
+}
+footer{
+    text-align: center;
+    margin: 10px;
+}
+.signature{
+    margin: 10px;
+    color: gray;
+    text-align: right;
+    margin-right: 50px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+}
