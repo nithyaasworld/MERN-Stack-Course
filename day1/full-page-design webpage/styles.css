@@ -1,0 +1,24 @@
+body{ 
+    background-image: url("./assets/vacationBG.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: darkgreen;
+    font-family: sans-serif;
+}
+.flex-container{
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+.book-vacation{
+    text-align: center;
+    margin-top: -20px;
+}
+button{
+    color: darkgreen;
+    border-radius: 10px;
+    padding: 15px 40px;
+    border: 1px solid darkgreen;
+    background: rgba(255, 255, 255, 0.1) 
+}
