@@ -4,23 +4,22 @@ function convertToLinkedList(treeRoot) {
         return { value: treeRoot.value, next: null };
     }
     let stack = [];
-    let linkedList = { value: treeRoot.value, next: null };
-    if (treeRoot.left) {
-        stack.push(treeRoot.left);
-    }
-    if (treeRoot.right) {
-        stack.push(treeRoot.right);
-    }
+    let linkedList = {};
     let currLinkedList = linkedList;
+    if (treeRoot) {
+        stack.push(treeRoot);
+        currLinkedList = { value: treeRoot.value, next: null };
+    }
+    
     while (stack.length > 0) {
-        let currStack = stack.shift();
+        let currStack = stack.pop();
         currLinkedList.next = { value: currStack.value, next: null };
         currLinkedList = currLinkedList.next;
-        if (currStack.left) {
-            stack.push(currStack.left);
-        }
         if (currStack.right) {
             stack.push(currStack.right);
+        }
+        if (currStack.left) {
+            stack.push(currStack.left);
         }
     }
     return linkedList;
