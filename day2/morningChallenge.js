@@ -1,27 +1,18 @@
 //https://gist.github.com/McLarenCollege/ff959c2d53c273586bcfb3294f25d444
-function convertToLinkedList(treeRoot) {
-    if (!treeRoot) return treeRoot;
-    if (!treeRoot.left && !treeRoot.right) {
-        return { value: treeRoot.value, next: null };
+function convertToLinkedList(root) {
+    let list = [];
+    preOrder(root);
+    function preOrder(root){
+         if(root) list.push(root.value);
+        root.left && preOrder(root.left);
+        root.right && preOrder(root.right);
     }
-    let stack = [];
-    let linkedList = {};
-    let currLinkedList = linkedList;
-    if (treeRoot) {
-        stack.push(treeRoot);
-        currLinkedList = { value: treeRoot.value, next: null };
-    }
-    
-    while (stack.length > 0) {
-        let currStack = stack.pop();
-        currLinkedList.next = { value: currStack.value, next: null };
-        currLinkedList = currLinkedList.next;
-        if (currStack.right) {
-            stack.push(currStack.right);
-        }
-        if (currStack.left) {
-            stack.push(currStack.left);
-        }
+    if (list.length === 0) return {};
+    let linkedList = {value: list[0], next: null};
+    let currLL = linkedList;
+    for(let i=1; i<list.length; i++){
+        currLL.next = {value: list[i], next: null};
+        currLL = currLL.next;
     }
     return linkedList;
 }
