@@ -1,3 +1,4 @@
+//https://gist.github.com/McLarenCollege/ff959c2d53c273586bcfb3294f25d444
 function convertToLinkedList(treeRoot) {
     if (!treeRoot) return treeRoot;
     if (!treeRoot.left && !treeRoot.right) {

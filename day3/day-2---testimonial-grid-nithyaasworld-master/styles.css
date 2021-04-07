@@ -1,0 +1,31 @@
+.flex-container{
+    display: flex;
+    width: 960px;
+    margin: 0 auto;
+    gap: 20px;
+} 
+.card-container-1{
+    display: flex;
+    flex-wrap: wrap;
+    flex: 4;
+    gap: 20px;
+}
+.card-container-2{
+    flex: 1;
+}
+.card{
+    border-radius: 10px;
+    border: 1px solid black;
+}
+.daniel{
+    flex: 2 1 400px;
+}
+.jonathan {
+    flex: 1 1 200px;
+}
+.patrick{
+    flex: 2 1 400px;
+}
+.jeanette{
+    flex: 1 1 200px;
+}
