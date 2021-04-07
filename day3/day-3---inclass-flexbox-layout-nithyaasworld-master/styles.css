@@ -22,7 +22,7 @@
     gap: 20px;
   }
   .header{
-    background-color: rgb(147, 203, 235);
+    background-color: #D6E9FE;
     display: flex;
     flex-direction: column;
     height: 300px;
@@ -38,6 +38,9 @@
     display: flex;
     justify-content: space-between;
     width: 800px;
+  }
+  .subscribe {
+    color: #5995DA;
   }
   .box-container{
     width: 1000px;
@@ -58,14 +61,10 @@
   .footer{
     display: flex;
     height: 100px;
-    background-color:rgb(147, 203, 235);
+    background-color:#D6E9FE;
     justify-content: space-between;
   }
-  .footer-left-part{
-    width: 300px;
-    background-color:  #5995DA;
-  }
-  .footer-right-part{
+  .footer-left-part, .footer-right-part{
     width: 300px;
     background-color:  #5995DA;
   }
