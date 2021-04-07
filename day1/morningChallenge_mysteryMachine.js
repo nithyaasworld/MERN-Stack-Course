@@ -23,15 +23,8 @@ function mysteryMachine(grid, row, col, n, dir) {
                 if ((row + directionMap[dir][0]) >= 0) grid.push(newrow);
                 else grid.unshift(newrow);
             } else {
-                if ((col + directionMap[dir][1]) >= 0) {
-                    for (let i = 0; i < grid.length; i++) {
-                        grid[i].push(0);
-                    }
-                } else {
-                    for (let i = 0; i < grid.length; i++) {
-                        grid[i].unshift(0);
-                    }
-                }
+                if ((col + directionMap[dir][1]) >= 0) for (let i = 0; i < grid.length; i++) grid[i].push(0);
+                else for (let i = 0; i < grid.length; i++) grid[i].unshift(0);
             }
             row = row + directionMap[dir][0];
             col = col + directionMap[dir][1];
