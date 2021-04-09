@@ -1,3 +1,4 @@
+// https://gist.github.com/McLarenCollege/f83f3fbfaed0396f62cb570c73e1110e
 function josephus(inputArr, k) {
     let result = [];
     while (inputArr.length > 0) {
