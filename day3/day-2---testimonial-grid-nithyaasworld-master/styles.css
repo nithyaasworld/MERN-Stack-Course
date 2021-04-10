@@ -22,51 +22,53 @@ body{
 .flex-container{
     display: flex;
     flex-wrap: wrap;
-    width: 1100px;
-    margin: 0 auto;
-    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
 } 
 .card-container-1{
     display: flex;
     flex-wrap: wrap;
-    flex: 3;
-    gap: 20px;
+    flex: 0 1 820px;
+    gap: 30px;
 }
 .card-container-2{
-  flex: 1;
+  flex: 1 1 240px;
   border-radius: 10px;
   background-color: hsl(0, 0%, 100%);
+  align-self: stretch;
+  max-width: 820px;
 } 
 .card{
     border-radius: 10px;
 }
 .daniel{
-    flex: 2 1 400px;
+    flex: 1 2 530px;
 }
 .jonathan {
-    flex: 1 1 200px;
+    flex: 1 1 260px;
 }
 .patrick{
-    flex: 2 1 400px;
+    flex: 1 2 530px;
 }
 .jeanette{
-    flex: 1 1 200px;
+    flex: 1 1 260px;
 }
 .kira{
-    flex: 1 1 200px;
+    flex: 1 1 260px;
 }
 /* ================== */
 /* Common Card Design */
 /* ================== */
 .author-section {
     display: flex;
-    gap: 25px;
+    gap: 1.2em;
 }
 .card{
     display: flex;
     flex-direction: column;
     gap: 16px;
-    padding: 20px 30px 30px 30px;
+    padding: 20px 29px 30px 30px;
 }
 .author-image img{
     border-radius: 50px;
@@ -87,9 +89,9 @@ body{
     max-width: 95%;
 }
 
-/* ================== */
+/* =========================== */
 /* Author-specific Card Design */
-/* ================== */
+/* =========================== */
 .daniel{
     background-color: hsl(263, 55%, 52%);
     color: white;
@@ -116,12 +118,7 @@ body{
 /* Mobile View */
 /* =========== */
 @media only screen and (max-width: 410px){
-    .flex-container{
-        flex-wrap: wrap;
-        width: 90vw;
-    }
-    .card-container-1{
-        flex-direction: column;
-        flex: 1 1 100%;
-    }
+.daniel {
+    background-position: 90% 0;
+}
 }
