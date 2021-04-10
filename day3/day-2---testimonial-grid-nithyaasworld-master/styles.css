@@ -9,14 +9,20 @@
 /* ========== */
 body{
     font-family: 'Barlow Semi Condensed', sans-serif;
+    font-size: 13px;
 }
 
 /* =========== */
 /* Card Layout */
 /* =========== */
+body{
+    padding: 20px;
+    background-color: hsl(0, 0%, 81%);
+}
 .flex-container{
     display: flex;
-    width: 1200px;
+    flex-wrap: wrap;
+    width: 1100px;
     margin: 0 auto;
     gap: 20px;
 } 
@@ -27,31 +33,31 @@ body{
     gap: 20px;
 }
 .card-container-2{
-    flex: 1;
-}
+  flex: 1;
+  border-radius: 10px;
+  background-color: hsl(0, 0%, 100%);
+} 
 .card{
     border-radius: 10px;
-    border: 1px solid black;
 }
 .daniel{
-    flex: 2 1 500px;
+    flex: 2 1 400px;
 }
 .jonathan {
-    flex: 1 1 250px;
+    flex: 1 1 200px;
 }
 .patrick{
     flex: 2 1 400px;
 }
 .jeanette{
-    flex: 1 1 250px;
+    flex: 1 1 200px;
 }
-/* =========== */
-/* Card Design */
-/* =========== */
-.daniel{
-    background-color: hsl(263, 55%, 52%);
-    color: white;
+.kira{
+    flex: 1 1 200px;
 }
+/* ================== */
+/* Common Card Design */
+/* ================== */
 .author-section {
     display: flex;
     gap: 25px;
@@ -59,23 +65,51 @@ body{
 .card{
     display: flex;
     flex-direction: column;
-    gap: 20px;
-    padding: 30px;
+    gap: 16px;
+    padding: 20px 30px 30px 30px;
 }
 .author-image img{
     border-radius: 50px;
-    width: 40px;
+    width: 33px;
     padding: 2px;
-    box-shadow: 2px 2px 6px  hsl(264, 85%, 92%);
+    background-color: hsl(0, 0%, 100%, 0.4);
+}
+.verified-graduate{
+    opacity: 0.5;
+    font-size: 0.85em;
 }
 .review-highlights{
-    font-size: 24px;
+    font-size: 20px;
+    opacity: 0.9;
 }
 .full-review{
     opacity: 0.5;
+    max-width: 95%;
 }
-.verified-graduate {
-    opacity: 0.5;
+
+/* ================== */
+/* Author-specific Card Design */
+/* ================== */
+.daniel{
+    background-color: hsl(263, 55%, 52%);
+    color: white;
+    background-image: url(./images/bg-pattern-quotation.svg);
+    background-repeat: no-repeat;
+    background-position: 78% 0%;
+}
+.jonathan{
+    background-color:hsl(217, 19%, 35%);
+    color: white;
+}
+.patrick{
+    color: white;
+    background-color: hsl(219, 29%, 14%);
+}
+.kira{
+    border: none;
+}
+.jeanette{
+    background-color: hsl(0, 0%, 100%);
 }
 
 /* =========== */
