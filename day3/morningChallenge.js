@@ -9,7 +9,7 @@ let IterativeRotationCipher = {
             });
             //Step 1 — remove all spaces:
             let stringWithoutSpace = string.split(' ').join('');
-            // Step 2 — shift the order of string characters to the right by 10:
+            // Step 2 — shift the order of string characters to the right by n-times:
             for (let i = 0; i < n; i++){
                 let lastChar = stringWithoutSpace.slice(-1);
                 stringWithoutSpace = lastChar + stringWithoutSpace.slice(0,stringWithoutSpace.length-1);
@@ -31,62 +31,42 @@ let IterativeRotationCipher = {
                                 })
                                 .join(' ');
         }
-        return '10 ' + string;
+        return `${n} ` + string;
     },
     decode: (inputString) => {
         let n = Number(parseInt(inputString));
-        console.log(n);
         inputString = inputString.slice(n.toString().length + 1);
-        // console.log('string is: ', inputString);
-        // console.log('inputString type is: ', typeof inputString);
-        // console.log(inputString.split(' '));
-        // while (n-- > 0) {
-        console.log('inputString: ', inputString);
-        //       //reversing step4:
-        inputString = inputString.split(' ').map(subString => {
-            for (let i = 0; i < n; i++) {
-                subString = subString.slice(1) + subString[0];
+        let iteration = n;
+        while(iteration-- > 0){
+            //reversing step4: i.e. shifting the order of characters for each space-separated substring to the LEFT by 10:
+            inputString = inputString.split(' ').map(subString => {
+                for (let i = 0; i < n; i++) {
+                    subString = subString.slice(1) + subString[0];
+                }
+                return subString;
+            }).join(' ');
+            //reversing step3: i.e. removing the space
+            let spacePositions = [];
+                inputString.split('').forEach((char,i) => {
+                    if (char === " ") spacePositions.push(i);
+                });
+            inputString = inputString.split(' ').join('');
+            //reversing step2: i.e. shifting the order of string characters to the LEFT by 10:
+            for (let i = 0; i < n; i++){
+                inputString = inputString.slice(1) + inputString[0];
             }
-            return subString;
-        }).join(' ');
-        // //reversing step3:
-        let spacePositions = [];
-            inputString.split('').forEach((char,i) => {
-                if (char === " ") spacePositions.push(i);
-            });
-        // console.log(spacePositions);
-        inputString = inputString.split(' ').join('');
-        console.log(inputString);
-        //reversing step2:
-        for (let i = 0; i < n; i++){
-            inputString = inputString.slice(1) + inputString[0];
+            //reversing step1: i.e. putting back the spaces:
+            let newString = inputString.split('');
+            for (let i = 0; i < spacePositions.length; i++){
+                newString.splice(spacePositions[i], 0, " ");
+            }
+            inputString = newString.join(''); 
         }
-        // //putting back the spaces:
-        let newString = inputString.split('');
-        for (let i = 0; i < spacePositions.length; i++){
-           newString.splice(spacePositions[i], 0, " ");
-        }
-        inputString = newString.join(''); 
-        // }
-        console.log(inputString);
-
+        return inputString;
     }
-    // Step 1 — remove all spaces:
-    // `Ifyouwishtomakeanapplepiefromscratch,youmustfirstinventtheuniverse.`
-    
-    // Step 2 — shift the order of string characters to the right by 10:
-    // `euniverse.Ifyouwishtomakeanapplepiefromscratch,youmustfirstinventth`
-    
-    // Step 3 — place the spaces back in their original positions:
-    // `eu niv erse .I fyou wi shtom ake anap plepiefr oms crat ch,yo umustf irs tinventth`
-    
-    // Step 4 — shift the order of characters for each space-separated substring to the right by 10:
-    // `eu vni seer .I oufy wi shtom eak apan frplepie som atcr ch,yo ustfum sir htinventt`
-    
-    // Repeat the steps 9 more times before returning the string with `10 ` prepended.
 }
 let quote = `If you wish to make an apple pie from scratch, you must first invent the universe.`;
 let solution = `10 hu fmo a,ys vi utie mr snehn rni tvte .ysushou teI fwea pmapi apfrok rei tnocsclet`;
-// IterativeRotationCipher.encode(10,quote) === solution; //true
-//console.log(IterativeRotationCipher.encode(10, quote));
-IterativeRotationCipher.decode(solution);
+
+console.log(IterativeRotationCipher.encode(10, quote));
+console.log(IterativeRotationCipher.decode(solution));
