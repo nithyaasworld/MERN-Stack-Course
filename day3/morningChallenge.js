@@ -9,18 +9,18 @@ let IterativeRotationCipher = {
             });
             //Step 1 — remove all spaces:
             let stringWithoutSpace = string.split(' ').join('');
-            // Step 2 — shift the order of string characters to the right by n-times:
+            //Step 2 — shift the order of string characters to the right by n-times:
             for (let i = 0; i < n; i++){
                 let lastChar = stringWithoutSpace.slice(-1);
                 stringWithoutSpace = lastChar + stringWithoutSpace.slice(0,stringWithoutSpace.length-1);
             }
-            // Step 3 — place the spaces back in their original positions:
+            //Step 3 — place the spaces back in their original positions:
             let newString = stringWithoutSpace.split('');
              for (let i = 0; i < spacePositions.length; i++){
                 newString.splice(spacePositions[i], 0, " ");
             }
             newString = newString.join('');
-            // Step 4 — shift the order of characters for each space-separated substring to the right by 10:
+            //Step 4 — shift the order of characters for each space-separated substring to the right by 10:
             string = newString.split(' ')
                                 .map(subString => {
                                     for (let i = 0; i < n; i++) {
