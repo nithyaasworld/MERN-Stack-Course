@@ -7,8 +7,7 @@ function numberOfPossibleIntegers(n) {
     
     let finalResult = [];
     findAllPossibleCombination();
-    finalResult = finalResult.filter(el => el.length > 1);
-    return (new Set(finalResult).size) + 1;
+    return new Set(finalResult).size + 1;
 
     function findAllPossibleCombination() {
         while (result.length > 0) {
