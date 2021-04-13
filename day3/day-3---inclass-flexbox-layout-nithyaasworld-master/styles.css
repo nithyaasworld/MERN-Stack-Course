@@ -41,6 +41,14 @@
   }
   .subscribe {
     color: #5995DA;
+    opacity: 0.8;
+    font-size: 0.9em;
+  }
+  .subscribe-arrow{
+    font-size: 0.4em;
+    position: relative;
+    top: -0.4em;
+    right: -0.30em;
   }
   .box-container{
     width: 1000px;
