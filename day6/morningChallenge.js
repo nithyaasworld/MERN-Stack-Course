@@ -33,9 +33,8 @@ function knightDialer(n) {
             }
         }
     }
-    console.log(validMoves);
-    console.log(validMoves.size);
+    return validMoves.size;
 }
-knightDialer(1);
-knightDialer(2); //[04, 06, 16, 18, 27, 29, 34, 38, 40, 43, 49, 60, 61, 67, 72, 76, 81, 83, 92, 94]
-knightDialer(4);
+console.log(knightDialer(1)); //should return 10
+console.log(knightDialer(2)); //should return 20
+console.log(knightDialer(4)); //should return 104
