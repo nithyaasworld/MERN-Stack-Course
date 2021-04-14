@@ -1,3 +1,4 @@
+//problem statement: https://gist.github.com/McLarenCollege/da23fb91c4bcc1c0a7c57def77ae1b01
 function maxLengthOfSnakeSequence(matrix) {
   let maxPossibleCount = matrix.length + matrix[0].length + 1;
   let maxCount = 0;
