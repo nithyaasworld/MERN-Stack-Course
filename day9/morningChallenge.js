@@ -15,7 +15,7 @@ function minStep(string1, string2) {
     currDistance = 0;
     letterFound = false;
     for(let i=0; i<dp.length; i++){
-        if(!letterFound && string1[0] === string2[i]){
+        if(!letterFound && string1[i] === string2[0]){
             dp[i][0] = currDistance;
             letterFound = true;
         }else{
@@ -37,3 +37,4 @@ function minStep(string1, string2) {
 console.log(minStep('abad', 'abac')); // should return 1
 console.log(minStep('Anshuman', 'Antihuman')); // should return 2
 console.log(minStep('kitten', 'sitting')); // should return 3
+console.log(minStep('sea', 'eat')); // should return 2
