@@ -14,9 +14,7 @@ class Dictionary {
                         break;
                     }
                 }
-                if (matched) {
-                    result.push(word);
-                }
+                if (matched) result.push(word);
             }
         });
         return result;
