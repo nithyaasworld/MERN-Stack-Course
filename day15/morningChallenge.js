@@ -1,3 +1,4 @@
+//Problem Statement: https://gist.github.com/McLarenCollege/d0a48fe8faa98ac1b7848c6ec955aad4
 function findAverageDistance() {
     let i = 10000000;
     let distances = [];

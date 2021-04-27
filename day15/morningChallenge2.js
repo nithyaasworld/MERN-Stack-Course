@@ -1,3 +1,4 @@
+//Problem statement: https://gist.github.com/McLarenCollege/640f628de22bed6bea941b77184f79db
 class Dictionary {
     constructor(words) {
         this.words = words;
