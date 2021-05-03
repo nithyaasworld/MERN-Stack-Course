@@ -1,3 +1,4 @@
+//Problem statement: https://gist.github.com/McLarenCollege/b7b2b54b9e591ab8c40b94a2110c281b
 function findMaxProfit(input) {
     let i = 0;
     let result = 0;
