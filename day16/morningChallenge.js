@@ -1,3 +1,4 @@
+//problem statement: https://gist.github.com/McLarenCollege/b232aad0b5d1d1122a78b8d13431d23f
 function encode(input){
     let combination = [input];
     let currItem = input;
