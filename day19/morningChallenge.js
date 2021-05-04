@@ -14,3 +14,4 @@ console.log(findMaxProfit([5, 2, 10])); //should return 8
 console.log(findMaxProfit([1, 2, 3])); //should return 2
 console.log(findMaxProfit([5, 2, 10, 12, 8, 1])); //should return 10
 console.log(findMaxProfit([100, 50, 30, 20, 40])); //should return 20
+console.log(findMaxProfit([1, 3 , 2, 5])); //should return 5
