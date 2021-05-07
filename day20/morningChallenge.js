@@ -2,32 +2,16 @@
 function removeInvalidParentheses(input) {
     let inputArr = input.split("");
     let result = [];
-    let toBeRemovedOpen = [];
-    let toBeRemovedClose = [];
-
-    let openBracketPositions = [];
-    let closeBracketPositions = [];
-
-    for (let i = 0; i < inputArr.length; i++){
-        if (input[i] === "(") {
-            toBeRemovedOpen.push(i);
-            openBracketPositions.push(i);
-        } else if (input[i] === ")") {
-            closeBracketPositions.push(i);
-            if (toBeRemovedOpen.length > 0) {
-                toBeRemovedOpen.pop();
-            } else {
-                toBeRemovedClose.push(i);
+   
+    function isValid(inputString) {
+        let open = 0;
+        for (let i = 0; i < inputString.length; i++){
+            if (inputString[i] === "(") open++;
+            else if (inputString[i] === ")") {
+                if (open < 1) return false;
             }
         }
     }
-
-
-    if (toBeRemovedOpen.length > 0) {
-        console.log(openBracketPositions);
-    }
-    console.log(toBeRemovedOpen);
-    console.log(toBeRemovedClose);
 }
 // console.log(removeInvalidParentheses("()())()"));
 // console.log(removeInvalidParentheses("(v)())()"));
