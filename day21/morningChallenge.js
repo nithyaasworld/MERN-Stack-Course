@@ -1,3 +1,4 @@
+//Problem statement: https://gist.github.com/McLarenCollege/6508c5ca1de0daa7d0af99dfaa995c0e
 function checkWord(testBoard, word) {
     let k = 0;
     let visited = Array.from(Array(testBoard.length), () => new Array(testBoard[0].length).fill(false));
