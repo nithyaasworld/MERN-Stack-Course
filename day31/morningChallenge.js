@@ -1,4 +1,6 @@
+//Problem statement: https://gist.github.com/McLarenCollege/d9c1b07ff2f516660fcf919caf4ae258
 function primeFactors(n) {
+    //Finding the factors
     let factors = [];
     let i = 2;
     while (n !== 1) {
@@ -9,6 +11,7 @@ function primeFactors(n) {
             i++;
         }
     }
+    //Finding the count of factor
     let factorsCount = [];
     let currItem = factors[0];
     let currCount = 1;
@@ -22,14 +25,9 @@ function primeFactors(n) {
             }
     }
     factorsCount.push([currItem, currCount]);
+    //modifying it to the expected format
     let finalString = [];
-    factorsCount.forEach(item => {
-        if (item[1] === 1) {
-            finalString.push(`(${item[0]})`)
-        } else {
-            finalString.push(`(${item[0]}**${item[1]})`)
-        }
-    })
+    factorsCount.forEach(item => (item[1] === 1) ? finalString.push(`(${item[0]})`) : finalString.push(`(${item[0]}**${item[1]})`));
     return finalString.join('');
 }
 console.log(primeFactors(80));
