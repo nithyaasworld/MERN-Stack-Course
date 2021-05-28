@@ -18,15 +18,15 @@ function numOfIsland(inputGrid) {
         }
     }
     //To check the items that can walk off using the left boundary values
-    for (let i = 1; i < gridCopy.length -1; i++){
+    for (let i = 1; i < gridCopy.length - 1; i++){
         if (gridCopy[i][0] === 1) {
             checkTheSurroundings([i, 0]);
         }
     }
     //To check the items that can walk off using the right boundary values
-    for (let i = 1; i < gridCopy.length -1; i++){
-        if (gridCopy[i][gridCopy.length -1] === 1) {
-            checkTheSurroundings([i, gridCopy.length-1]);
+    for (let i = 1; i < gridCopy.length - 1; i++){
+        if (gridCopy[i][gridCopy[0].length - 1] === 1) {
+            checkTheSurroundings([i, gridCopy[0].length-1]);
         }
     }
     gridCopy.forEach(grid => console.log(JSON.stringify(grid)));
