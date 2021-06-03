@@ -27,4 +27,4 @@ console.log(nBonacciRatio(1)); //should return 1.61803
 console.log(nBonacciRatio(2)); //should return 2.4142
 console.log(nBonacciRatio(3)); // should return 3.302775637731995
 console.log(nBonacciRatio(7)); // should return 7.140054944640259
-console.log(nBonacciRatio(50));
+console.log(nBonacciRatio(50)); //doesn't work for this 
