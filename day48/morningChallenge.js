@@ -3,14 +3,12 @@
 function simplifiedFractions(n){
     let result = [];
     for(let denominator=2; denominator<=n; denominator++){
-        for(let numerator=1; numerator<=n-1; numerator++){
-            if(numerator < denominator){
+        for(let numerator=1; numerator<denominator; numerator++){
                 if (numerator === 1){
                     result.push(`${numerator}/${denominator}`);
                 }else if(denominator % numerator !== 0){
                     result.push(`${numerator}/${denominator}`);
                 }
-            }
         }
     }
     return result;
