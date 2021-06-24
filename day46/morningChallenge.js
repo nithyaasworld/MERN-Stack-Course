@@ -22,8 +22,8 @@ function canThisPlayerWin(n) {
     }
     return currTurn === "alice" ? true : false;
 }
-// console.log(canThisPlayerWin(17));
-
+console.log(canThisPlayerWin(9));
+console.log(canThisPlayerWin(12));
 // function findHighestPerfectSquare(n) {
 
 // }

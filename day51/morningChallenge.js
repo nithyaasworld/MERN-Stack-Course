@@ -1,5 +1,12 @@
 //https://gist.github.com/McLarenCollege/1b1c2a5bc69689b6af08ff352edff8ca
 
+
+let randomArr = [];
+let i = 4;
+while (i-- > 4) {
+    randomArr.push(Math.random() * 5);
+}
+
 function calcScore(input, guess){
     let correctPos = 0;
     let incorrectPos = 0;
@@ -21,6 +28,6 @@ function calcScore(input, guess){
     }
     return { correctPos: correctPos, incorrectPos: incorrectPos};
 }
-console.log(calcScore([4, 4, 1, 2], [4, 1, 0, 2])); // Should return { correctPos: 2, incorrectPos: 1 }
-console.log(calcScore([4, 4, 1, 2], [0, 0, 0, 0])); // Should return { correctPos: 0, incorrectPos: 0 }
-console.log(calcScore([4, 4, 1, 2], [4, 4, 1, 2])); // Should return { correctPos: 4, incorrectPos: 0 }
+// console.log(calcScore([4, 4, 1, 2], [4, 1, 0, 2])); // Should return { correctPos: 2, incorrectPos: 1 }
+// console.log(calcScore([4, 4, 1, 2], [0, 0, 0, 0])); // Should return { correctPos: 0, incorrectPos: 0 }
+// console.log(calcScore([4, 4, 1, 2], [4, 4, 1, 2])); // Should return { correctPos: 4, incorrectPos: 0 }
