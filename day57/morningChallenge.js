@@ -1,3 +1,4 @@
+//Problem statement: https://gist.github.com/McLarenCollege/47bf3c1c67d49ed3f69f21a090d47e0b
 function findMaxDiff(inputTree) {
   let maxDiff = [0];
   let parents = [];
