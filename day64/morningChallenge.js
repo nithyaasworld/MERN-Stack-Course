@@ -1,14 +1,13 @@
 //https://gist.github.com/McLarenCollege/71bb049fcbd1903dc34b1ef64b1efd79
 function findMinClip(inputArr, time) {
     if (!inputArr.some(clip => clip[0] === 0)) return -1;
-    if (!inputArr.some(clip => clip[1] === time)) return -1;
-    
     let maxStartingPoint = 0;
     inputArr.forEach(clip => {
         if (clip[0] === 0) {
             if (maxStartingPoint < clip[1]) maxStartingPoint = clip[1];
         }
     })
+    if (maxStartingPoint >= time) return 1;
     let next;
     let count = 1;
     
@@ -29,6 +28,7 @@ function findMinClip(inputArr, time) {
         if (currMax === maxStartingPoint) return -1;
         maxStartingPoint = currMax;
         count++;
+        if (maxStartingPoint >= time) return count;
     }
     return count;
 }
