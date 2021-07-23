@@ -1,6 +1,8 @@
 //https://gist.github.com/McLarenCollege/cf0eab2e4b16413d13f658663262e0a0
 
-function findLeastPrice(price, special, needs){
+function findLeastPrice(price, special, needs) {
+    if (needs.every(need => !need)) return 0;
+    if (price.every(price => price===0)) return 0;
     let leastPrice = Number.MAX_VALUE;
     for (let i = 0; i < special.length; i++){
         if (special[i].slice(0, -1).every((item, i) => item <= needs[i])) {
