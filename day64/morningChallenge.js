@@ -38,3 +38,5 @@ clip2 = [[0, 2], [4, 6], [8, 10], [1, 9], [1, 5], [5, 9]];
 console.log(findMinClip(clip2, 10));
 clip3 = [[0, 1], [1, 2]];
 console.log(findMinClip(clip3, 5));
+clip4 = [[0, 2], [1, 4], [5, 7]];
+console.log(findMinClip(clip4, 6));

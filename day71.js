@@ -22,3 +22,6 @@ let price1 = [2, 3, 4];
 let special1 = [[1, 1, 0, 4], [2, 2, 1, 9]]
 let needs1 = [1, 2, 1];
 console.log(findLeastPrice(price1, special1, needs1));
+[1,1,1]
+[[1,1,1,0],[2,2,1,1]]
+[1,1,0]

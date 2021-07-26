@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="widget">
+        <div class="prev navigator"></div>
+        <div class="date-display"></div>
+        <div class="next navigator"></div>
+      </div>
+    </div>
+    <script type="text/javascript">
+      const displayDiv = document.querySelector(".date-display");
+      const prevBtn = document.querySelector(".prev");
+      const nextBtn = document.querySelector(".next");
+      let currMidDay = new Date().getTime();
+      let todayString = new Date()
+        .toDateString()
+        .split(" ")
+        .slice(1, 3)
+        .join(" ");
+      console.log(todayString);
+      updateCurrWeek(currMidDay);  
+      function updateCurrWeek(currMidDay) {
+        let currWeek = [
+          currMidDay - 86400000 * 3,
+          currMidDay - 86400000 * 2,
+          currMidDay - 86400000,
+          currMidDay,
+          currMidDay + 86400000,
+          currMidDay + 86400000 * 2,
+          currMidDay + 86400000 * 3,
+        ];
+        currWeek = currWeek.map((day) =>
+          new Date(day).toDateString().split(" ").slice(1, 3).join(" ")
+        );
+        displayDiv.innerHTML = "";
+        currWeek.forEach((day) => {
+          let dayDiv = document.createElement("div");
+          dayDiv.innerText = day;
+          if (day === todayString) dayDiv.classList.add("today");
+          console.log(dayDiv);
+          displayDiv.appendChild(dayDiv);
+        });
+      }
+      prevBtn.addEventListener("click", () => {
+        currMidDay = currMidDay - 86400000 * 7;
+        updateCurrWeek(currMidDay);
+      });
+      nextBtn.addEventListener("click", () => {
+        currMidDay = currMidDay + 86400000 * 7;
+        updateCurrWeek(currMidDay);
+      });
+    </script>
+  </body>
+</html>
